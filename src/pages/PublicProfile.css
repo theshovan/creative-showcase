@@ -1,0 +1,265 @@
+/* ============================================================
+   PUBLIC PROFILE — STUDIO THEME (MATCHING LANDING PAGE)
+   Black / White / Grey + Technical Grid
+   ============================================================ */
+
+:root {
+  --studio-black: #000000;
+  --studio-white: #ffffff;
+  --studio-gray: #b6b6b6ff;
+  --grid-color: rgba(0, 0, 0, 0.04);
+  --shadow-block: 10px 10px 0px rgba(0, 0, 0, 0.1);
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================================
+   PAGE BASE + GRID
+   ============================================================ */
+
+.public-profile {
+  min-height: 100vh;
+  background-color: var(--studio-white);
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: var(--studio-black);
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* ============================================================
+   NAVBAR (CONSISTENT WITH LANDING PAGE)
+   ============================================================ */
+
+.public-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 72px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.public-nav .nav-container {
+  width: 92%;
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.public-nav .logo {
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  color: var(--studio-black);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   PROFILE HEADER
+   ============================================================ */
+
+.profile-header {
+  padding: 6rem 2rem 4rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: #d7dce0
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+/* Avatar */
+.profile-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 2px solid var(--studio-black);
+  background: var(--studio-white);
+  overflow: hidden;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--studio-black);
+}
+
+/* Info */
+.profile-info h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  margin-bottom: 1rem;
+}
+
+.profile-bio {
+  font-size: 1rem;
+  color: #666;
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+/* Stats */
+.profile-stats {
+  display: flex;
+  gap: 3rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+/* ============================================================
+   GALLERY
+   ============================================================ */
+
+.public-gallery {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 4rem 4% 6rem;
+}
+
+.public-gallery h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin-bottom: 3rem;
+}
+
+/* Empty */
+.empty-gallery {
+  padding: 5rem 2rem;
+  text-align: center;
+  color: #777;
+}
+
+/* ============================================================
+   IMAGE CARDS (MATCHING IMAGE-CARD STYLE)
+   ============================================================ */
+
+.public-image-card {
+  background: var(--studio-white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-block);
+  cursor: pointer;
+}
+
+.public-image-card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 18px 18px 0px rgba(0, 0, 0, 0.08);
+}
+
+.public-image-card img {
+  width: 100%;
+  display: block;
+  filter: grayscale(20%);
+  transition: var(--transition-smooth);
+}
+
+.public-image-card:hover img {
+  filter: grayscale(0%);
+}
+
+.public-image-info {
+  padding: 1.2rem;
+  background: var(--studio-white);
+}
+
+.public-image-info h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.public-image-info p {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 0.6rem;
+}
+
+.public-image-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: #999;
+}
+
+/* ============================================================
+   LOADING & NOT FOUND
+   ============================================================ */
+
+.loading-screen,
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--studio-white);
+  color: #777;
+}
+
+.not-found a {
+  margin-top: 1rem;
+  color: var(--studio-black);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-stats {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .profile-info h1 {
+    font-size: 2.2rem;
+  }
+}

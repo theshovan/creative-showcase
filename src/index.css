@@ -1,0 +1,55 @@
+/* index.css - Light Slate Grey with Grid, Grain, and Corner Gradients */
+
+:root {
+  --bg-main: #e5e7eb; /* Light Slate Grey */
+  --text-dark: #1a1a1a;
+  --text-muted: #4b5563;
+  --grid-color: rgba(0, 0, 0, 0.05); /* Subtle grid lines */
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  
+  /* LAYER 1: The Geometric Grid */
+  /* LAYER 2: Noise Grain Texture */
+  /* LAYER 3: Dark Corner Gradients (Vignette) */
+  background-image: 
+    radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.07) 100%),
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.60' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
+  
+  background-size: 100% 100%, 40px 40px, 40px 40px, auto;
+  background-attachment: fixed;
+  
+  color: var(--text-dark);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Enhancing the corner depth with a secondary overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* This creates deep shadows specifically in the four corners */
+  background: 
+    radial-gradient(circle at 0% 0%, rgba(0,0,0,0.05) 0%, transparent 50%),
+    radial-gradient(circle at 100% 0%, rgba(0,0,0,0.05) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(0,0,0,0.05) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(0,0,0,0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 100vh;
+}

@@ -1,0 +1,46 @@
+/* App.css */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logos: Original colors with a subtle black drop shadow */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: filter 300ms;
+  filter: drop-shadow(0 0 1em rgba(0,0,0,0.1));
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(0,0,0,0.2));
+}
+
+.card {
+  padding: 2.5em;
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+  border: 1px solid #000;
+  margin: 2rem 0;
+  backdrop-filter: blur(5px);
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #000; /* Dark text for light background */
+  letter-spacing: -0.05em;
+}
+
+p {
+  color: #444;
+  font-size: 1.2rem;
+}
+
+.read-the-docs {
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+}
