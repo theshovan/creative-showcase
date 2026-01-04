@@ -21,15 +21,15 @@ The **Creative Showcase** is a full-stack web application developed for the **In
 * **Frontend:** React (Bonus) / HTML5 / CSS3 / JavaScript 
 * **Backend/Auth:** Firebase (Authentication, Firestore, Storage)
 * **Layout:** CSS Grid & `react-masonry-css` 
-* **Hosting:** Vercel / Netlify 
+* **Hosting:** Vercel 
 
 ## 🚀 Installation & Execution
 Follow these steps to run the project locally:
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/theshovan/creative-showcase.git]
-    cd creative-showcase
+    git clone [https://github.com/theshovan/art-showcase-frontend.git]
+    cd art-showcase-frontend
     ```
 
 2.  **Install Dependencies:**
